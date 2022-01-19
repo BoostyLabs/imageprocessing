@@ -117,7 +117,8 @@ type Inscription struct {
 	Text        string
 	X           float64
 	Y           float64
-	TextAlign   float64
+	XAlign      float64
+	YAlign      float64
 }
 
 // ApplyInscription overlays the inscription on the image.
@@ -129,7 +130,7 @@ func ApplyInscription(inscription Inscription) (image.Image, error) {
 
 	dc.SetHexColor(inscription.FontColor)
 	dc.DrawImage(inscription.Img, 0, 0)
-	dc.DrawStringAnchored(inscription.Text, inscription.X, inscription.Y, inscription.TextAlign, 0.5)
+	dc.DrawStringAnchored(inscription.Text, inscription.X, inscription.Y, inscription.XAlign, inscription.YAlign)
 	dc.Clip()
 	return dc.Image(), nil
 }
