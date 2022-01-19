@@ -131,8 +131,8 @@ func ApplyInscription(inscription Inscription) (image.Image, error) {
 
 	dc.SetHexColor(inscription.FontColor)
 	dc.DrawImage(inscription.Img, 0, 0)
+	dc.RotateAbout(inscription.Rotate, inscription.X, inscription.Y)
 	dc.DrawStringAnchored(inscription.Text, inscription.X, inscription.Y, inscription.XAlign, inscription.YAlign)
-	dc.Rotate(inscription.Rotate)
 	dc.Clip()
 	return dc.Image(), nil
 }
