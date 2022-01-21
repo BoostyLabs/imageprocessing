@@ -25,6 +25,8 @@ const (
 	TypeFilePNG TypeFile = "png"
 	// TypeFileSVG indicates that the type file is svg.
 	TypeFileSVG TypeFile = "svg"
+	// TypeFileJPEG indicates that the type file is jpeg.
+	TypeFileJPEG TypeFile = "jpeg"
 	// TypeFileJSON indicates that the type file is json.
 	TypeFileJSON TypeFile = "json"
 )
